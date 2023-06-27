@@ -4,20 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Employee {
 	@Autowired
-	private Address address;
-
-	public Employee(Address address) {
-
+	private Address address; // inside property 
+	
+	@Autowired
+	public Employee(Address address) {  //inseide constructor
 		super();
-		System.out.println("inside constructor");
+		
 		this.address = address;
+		System.out.println("inside constructor");
 	}
 
 	public Address getAddress() {
 		return address;
 	}
-
-	public void setAddress(Address address) {
+	@Autowired
+	public void setAddress(Address address) { //inside setter
 		System.out.println("inside setAddress");
 		this.address = address;
 	}  
