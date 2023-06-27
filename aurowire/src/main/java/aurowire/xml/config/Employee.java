@@ -5,7 +5,9 @@ public class Employee {
 	private Address address;
 
 	public Employee(Address address) {
+
 		super();
+		System.out.println("inside constructor");
 		this.address = address;
 	}
 
@@ -14,8 +16,9 @@ public class Employee {
 	}
 
 	public void setAddress(Address address) {
+		System.out.println("inside setAddress");
 		this.address = address;
-	}
+	}  
 
 	@Override
 	public String toString() {
