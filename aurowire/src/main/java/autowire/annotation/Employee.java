@@ -1,12 +1,13 @@
 package autowire.annotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Employee {
 	@Autowired
+	@Qualifier("address1")  // to identyfy the neab by name 
 	private Address address; // inside property 
 	
-	@Autowired
 	public Employee(Address address) {  //inseide constructor
 		super();
 		
@@ -17,7 +18,6 @@ public class Employee {
 	public Address getAddress() {
 		return address;
 	}
-	@Autowired
 	public void setAddress(Address address) { //inside setter
 		System.out.println("inside setAddress");
 		this.address = address;
