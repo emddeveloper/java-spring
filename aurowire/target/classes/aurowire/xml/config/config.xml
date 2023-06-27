@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="aurowire.xml.config.Address" name="address">
+		<property name="city" value="Kolkata"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+	<bean class="aurowire.xml.config.Employee" name="emp1">
+		<property name="address">
+			<ref bean="address"></ref>
+		</property>
+	</bean>
+</beans>
